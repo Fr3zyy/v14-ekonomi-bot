@@ -1,5 +1,7 @@
 # v14-ekonomi-bot
 
+## ⭐ 25 Star geldiginde gelişmiş komutlar eklenecek ! ⭐
+
 # Kurulum 
 - İlk olarak CMD'ye `npm install` yazın.
 - config.js dosyasına girip token ve mongodb alanını doldurun.
