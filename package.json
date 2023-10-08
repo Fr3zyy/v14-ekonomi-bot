@@ -1,0 +1,20 @@
+{
+  "name": "bos-altyapi",
+  "version": "1.0.0",
+  "description": "Fr3zy Youtube Boş Altyapı",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "author": "Fr3zy",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "discord-gamecord": "^4.4.1",
+    "discord.js": "^14.13.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.5.4",
+    "nodemon": "^3.0.1"
+  }
+}
