@@ -1,21 +1,13 @@
 const { Client, GatewayIntentBits, Events, Collection } = require("discord.js");
-const fs = require('node:fs');
-const path = require('node:path');
 const INTENTS = Object.values(GatewayIntentBits);
 const client = new Client({ intents: INTENTS });
 const config = require("./config.js");
 const chalk = require('chalk');
-const { REST } = require("@discordjs/rest");
-const { Routes } = require("discord-api-types/v10");
 const { readdirSync } = require("fs");
-const moment = require("moment");
 const mongoose = require("mongoose");
-const AntiCrash = require("./Utils/AntiCrash.js");
-let token = config.bot.token;
 
 client.commands = new Collection();
 client.commandaliases = new Collection();
-const rest = new REST({ version: "10" }).setToken(token);
 
 mongoose
     .connect(config.bot.mongoDb, {
@@ -54,5 +46,3 @@ readdirSync("./commands").forEach(async (file) => {
 });
 
 client.login(config.bot.token);
-
-require("./Utils/AntiCrash.js")(client);
