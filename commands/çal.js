@@ -10,6 +10,16 @@ module.exports = {
             const targetUser = message.mentions.users.first();
             const userData = await User.findOne({ id: userId });
 
+            if (!targetUser) {
+                const embed = new EmbedBuilder()
+                    .setColor('#FF0000')
+                    .setTitle('Çalma Başarısız')
+                    .setDescription('Kullanım: `.çal @kullanıcı`')
+                    .setTimestamp();
+
+                return message.reply({ embeds: [embed] });
+            }
+
             if (targetUser.bot) {
                 const embed = new EmbedBuilder()
                     .setColor('#FF0000')
@@ -20,15 +30,7 @@ module.exports = {
                 return message.reply({ embeds: [embed] });
             }
 
-            if (!targetUser) {
-                const embed = new EmbedBuilder()
-                    .setColor('#FF0000')
-                    .setTitle('Çalma Başarısız')
-                    .setDescription('Kullanım: `.çal @kullanıcı`')
-                    .setTimestamp();
 
-                return message.reply({ embeds: [embed] });
-            }
             if (!userData) {
                 const embed = new EmbedBuilder()
                 .setDescription(`Banka hesabınız bulunmamaktadır. .banka-oluştur komutunu kullanarak yeni hesap oluşturunuz.`)
