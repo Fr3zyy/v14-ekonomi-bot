@@ -2,7 +2,8 @@ module.exports = {
     bot: {
         token: "", //botun tokeni
         prefix: ".", //botun prefixi
-        mongoDb: "" //MongoDB Url. Youtubede araştırarak nasıl alınacagını öürenebilirsiniz
+        mongoDb: "", //MongoDB Url. Youtubede araştırarak nasıl alınacagını öürenebilirsiniz
+        owners: ["owner-id-1"]
     },
     coinflip: {
         coinFlipMax: 250000, //Coinflip en fazla oynayabilecekleri para
