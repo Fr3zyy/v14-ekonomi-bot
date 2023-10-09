@@ -14,7 +14,7 @@ module.exports = {
                 const embed = new EmbedBuilder()
                     .setColor('#FF0000')
                     .setTitle('Çalma Başarısız')
-                    .setDescription('Botun parasını nasıl çalacaksın ?!?!`')
+                    .setDescription('Botun parasını nasıl çalacaksın ?!?!')
                     .setTimestamp();
 
                 return message.reply({ embeds: [embed] });
